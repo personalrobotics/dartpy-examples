@@ -1,0 +1,18 @@
+language: python
+
+sudo: required
+
+dist: trusty
+
+python:
+  - "2.7"
+  - "3.4"
+
+install:
+  - sudo apt-add-repository ppa:libccd-debs -y
+  - sudo apt-add-repository ppa:fcl-debs -y
+  - sudo apt-add-repository ppa:dartsim -y
+  - sudo apt-add-repository ppa:personalrobotics -y
+  - sudo apt-get update -q
+  - sudo apt-get install python-dartpy python3-dartpy -y
+  
