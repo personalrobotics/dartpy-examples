@@ -19,6 +19,7 @@ install:
 script:
   - find /usr -name dartpy.so
   - python --version
+  - python -c "import site; print(site.getsitepackages())"
   - cd tests
   - python -m unittest test_*
   - cd ..
