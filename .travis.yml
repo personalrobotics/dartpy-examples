@@ -18,6 +18,7 @@ install:
   
 script:
   - find /usr -name dartpy.so
+  - python --version
   - cd tests
   - python -m unittest test_*
   - cd ..
