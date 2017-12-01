@@ -16,3 +16,5 @@ install:
   - sudo apt-get update -q
   - sudo apt-get install python-dartpy python3-dartpy -y
   
+script:
+  - python -m unittest test_*
