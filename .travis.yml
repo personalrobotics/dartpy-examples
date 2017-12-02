@@ -10,6 +10,9 @@ python:
   - "3.5"
   - "3.6"
 
+virtualenv:
+  system_site_packages: true
+
 install:
   - sudo apt-add-repository ppa:libccd-debs -y
   - sudo apt-add-repository ppa:fcl-debs -y
