@@ -9,9 +9,8 @@ python:
   - "3.4"
   - "3.5"
   - "3.6"
-
-virtualenv:
-  system_site_packages: true
+  - "2.7_with_system_site_packages"
+  - "3.2_with_system_site_packages"
 
 install:
   - sudo apt-add-repository ppa:libccd-debs -y
