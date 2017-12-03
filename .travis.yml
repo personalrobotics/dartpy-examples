@@ -1,0 +1,20 @@
+language: generic
+
+sudo: required
+
+dist: trusty
+
+install:
+  - sudo apt-add-repository ppa:libccd-debs -y
+  - sudo apt-add-repository ppa:fcl-debs -y
+  - sudo apt-add-repository ppa:dartsim -y
+  - sudo apt-add-repository ppa:personalrobotics -y
+  - sudo apt-get update -q
+  - sudo apt-get install python-dartpy python3-dartpy -y
+  - sudo apt-get install python-pytest python3-pytest python-logilab-common python3-logilab-common -y
+  
+script:
+  - cd tests
+  - pytest
+  - pytest3
+  - cd ..
