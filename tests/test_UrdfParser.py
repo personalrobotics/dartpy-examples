@@ -6,7 +6,7 @@ import dartpy as dart
 
 class TestUrdfParser(unittest.TestCase):
     def test_parse_skeleton(self):
-        root_path = os.path.join(os.path.dirname(__file__), 'data')
+        root_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'data')
         cube_path = os.path.join(root_path, 'urdf', 'cube.urdf')
 
         urdf_loader = dart.utils.DartLoader()

@@ -1,6 +1,4 @@
 import dartpy as dart
-import os.path
-import sys
 from OpenGL.GLUT import *
 
 if __name__ == '__main__':
