@@ -1,17 +1,8 @@
-#language: python
 language: generic
 
 sudo: required
 
 dist: trusty
-
-#python:
-#  - "2.7"
-#  - "3.4"
-#  - "3.5"
-#  - "3.6"
-#  - "2.7_with_system_site_packages"
-#  - "3.2_with_system_site_packages"
 
 install:
   - sudo apt-add-repository ppa:libccd-debs -y
@@ -20,12 +11,13 @@ install:
   - sudo apt-add-repository ppa:personalrobotics -y
   - sudo apt-get update -q
   - sudo apt-get install python-dartpy python3-dartpy -y
+  - sudo apt-get install python-pytest python3-pytest -y
   
 script:
   - find /usr -name dartpy.so
   - python --version
   - python -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())"
   - cd tests
-  - python3 -m unittest test_*
-  - python -m unittest test_*
+  - pytest
+  - pytest-3
   - cd ..
