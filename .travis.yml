@@ -16,5 +16,5 @@ install:
 script:
   - cd tests
   - pytest
-  - pytest-3
+  - pytest3
   - cd ..
