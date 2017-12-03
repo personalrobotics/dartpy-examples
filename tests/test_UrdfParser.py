@@ -1,8 +1,8 @@
-import dartpy as dart
-import numpy as np
 import os.path
-import sys
 import unittest
+
+import dartpy as dart
+
 
 class TestUrdfParser(unittest.TestCase):
     def test_parse_skeleton(self):
@@ -17,6 +17,7 @@ class TestUrdfParser(unittest.TestCase):
         self.assertEqual(cube.getNumJoints(), 1)
         self.assertEqual(cube.getNumDofs(), 6)
         self.assertIsNotNone(cube.getRootBodyNode(0))
+
 
 if __name__ == '__main__':
     unittest.main()
